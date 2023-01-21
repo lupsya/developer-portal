@@ -109,33 +109,31 @@ scrape_configs:
 
     static_configs:
       - targets: ['localhost:9100']
-
         labels:
           alias: 'relaynode1'
           type:  'cardano-node'
 
       - targets: ['<relay node 2 public ip address>:9100']
-
         labels:
           alias: 'relaynode2'
           type:  'cardano-node'
+          
       - targets: ['<block producer public ip address>:9100']
-
         labels:
           alias: 'block-producer-node'
           type:  'cardano-node'
-     - targets: ['localhost:12798']
+          
+      - targets: ['localhost:12798']
         labels:
           alias: 'relaynode1'
           type:  'cardano-node'
 
-     - targets: ['<relay node 2 public ip address>:12798']
-
+      - targets: ['<relay node 2 public ip address>:12798']
         labels:
           alias: 'relaynode2'
           type:  'cardano-node'
 
-     - targets: ['<block producer public ip address>:12798']
+      - targets: ['<block producer public ip address>:12798']
         labels:
           alias: 'block-producer-node'
           type:  'cardano-node'
